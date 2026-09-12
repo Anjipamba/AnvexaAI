@@ -1,0 +1,53 @@
+/* ==========================
+   Menubar
+========================== */
+:host ::ng-deep .p-menubar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================
+   Desktop
+========================== */
+@media (min-width: 992px) {
+
+    :host ::ng-deep .p-menubar-root-list {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+@media (max-width: 991px) {
+
+    /* Hamburger on right */
+    :host ::ng-deep .p-menubar-button {
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    /* Space for hamburger */
+    :host ::ng-deep .p-menubar-end {
+        margin-right: 3rem;
+    }
+
+    /* Mobile dropdown on right */
+    :host ::ng-deep .p-menubar-root-list {
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        right: 0 !important;
+        left: auto !important;
+        transform: none !important;
+        width: 220px;
+        z-index: 1000;
+    }
+
+}

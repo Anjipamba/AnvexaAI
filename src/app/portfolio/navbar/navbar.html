@@ -1,0 +1,107 @@
+<header class="portfolio-header w-full border-b border-surface-700 bg-surface-900/80 backdrop-blur-md">
+    <div >
+
+        <p-menubar [model]="items" styleClass="border-none bg-transparent">
+
+            <ng-template pTemplate="start">
+
+                <div class="flex items-center gap-4">
+
+                    <div
+                        class="status">
+
+                        AP
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="text-lg font-bold text-white">
+                            ANJAIAH PAMBA
+                        </h4>
+
+                        <span class="text-sm text-surface-400 bg-primary text-white font-bold " style="border-radius: 4px;">
+                            .Net Full Stack Engineer
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </ng-template>
+
+            <ng-template pTemplate="end">
+
+                <div class="flex items-center gap-4 ">
+
+                    
+                    <a
+                        href="https://www.linkedin.com/in/anjaiah-pamba-9a9567241"
+                        target="_blank">
+
+<i
+                            class="pi pi-linkedin text-2xl text-primary hover:text-primary-300 transition-all cursor-pointer">
+                        </i>
+                        
+                    </a>
+                    
+                    <a 
+                 
+                        href="mailto:dajbdhadj@gmail.com">
+
+<i
+                            class="pi pi-envelope text-2xl text-primary hover:text-primary-300 transition-all cursor-pointer">
+                        </i>
+                        
+                    </a>
+                    <p-button
+                      
+                        label="Resume"
+                        icon="pi pi-download"
+                        severity="contrast"
+                        rounded="true"
+                        (onClick)="downloadResume()">
+                    </p-button>
+                            <!-- Dark Mode -->
+        <button
+            class="layout-topbar-action"
+            (click)="toggleDarkMode()">
+            <i
+                [ngClass]="{
+                    'pi': true,
+                    'pi-moon': layoutService.isDarkTheme(),
+                    'pi-sun': !layoutService.isDarkTheme()
+                }">
+            </i>
+        </button>
+
+        <!-- Theme -->
+        <div class="relative ">
+
+            <button
+                class="layout-topbar-action"
+                pStyleClass="@next"
+                enterFromClass="hidden"
+                enterActiveClass="animate-scalein"
+                leaveToClass="hidden"
+                leaveActiveClass="animate-fadeout"
+                [hideOnOutsideClick]="true">
+
+                <i class="pi pi-palette"></i>
+
+            </button>
+            <!-- <div class="hidden md:block"> -->
+                <app-configurator></app-configurator>
+            <!-- </div> -->
+
+        </div>
+
+                </div>
+
+            </ng-template>
+
+        </p-menubar>
+
+    </div>
+
+</header>
